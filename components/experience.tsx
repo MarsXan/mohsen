@@ -55,12 +55,12 @@ export default function Experience() {
       skills: ["SwiftUI", "Jetpack Compose", "MVVM", "MVI", "CI/CD"],
     },
     {
-      title: "Technical Team Lead",
+      title: "Android Developer",
       company: "Toolbox",
       location: "Tehran, Iran (Part-Time)",
       period: "Jul 2022 – Sep 2023",
       description: [
-        "Led the migration from version 5 to 6, incorporating Jetpack and Android Navigation Component to enhance app functionality and performance.",
+        "Migrated the app from version 5 to 6, incorporating Jetpack and Android Navigation Component to enhance app functionality and performance.",
         "Launched web and PWA apps, increasing user accessibility by 50% and growing platform reach by 15%.",
         "Introduced microservices for the backend, improving scalability and deployment efficiency.",
         "Established a stable DevOps environment, streamlining development and deployment processes.",
@@ -87,10 +87,10 @@ export default function Experience() {
       period: "Jan 2016 – Jul 2020",
       description: [
         "Developed products such as online taxi and courier systems, enabling a 25% faster time-to-market and improving scalability to handle 2,000,000+ users.",
-        "Led the development of a location-based SaaS framework, enabling service providers (e.g., taxi, courier, and shopping services) to launch fully functional apps in less than a week.",
+        "Built a location-based SaaS framework, enabling service providers (e.g., taxi, courier, and shopping services) to launch fully functional apps in less than a week.",
         "Managed cross-functional teams, driving the design, development, and deployment of location-based platforms across Android and iOS.",
       ],
-      skills: ["Android", "iOS", "Location-based Services", "SaaS", "Team Leadership"],
+      skills: ["Android", "iOS", "Location-based Services", "SaaS"],
     },
   ]
 

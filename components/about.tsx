@@ -29,7 +29,7 @@ export default function About() {
           <div className="mx-auto max-w-3xl space-y-4 text-left">
             <p>
               I specialize in building high-performance Android and iOS applications using Kotlin, Swift, and Flutter.
-              With a focus on optimizing app performance and reducing development cycles, I've led teams to deliver
+              With a focus on optimizing app performance and reducing development cycles, I deliver
               seamless user experiences across platforms.
             </p>
             <p>
