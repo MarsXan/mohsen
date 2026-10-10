@@ -35,7 +35,7 @@ export default function About() {
             <p>
               While my primary focus is mobile development, I also bring backend expertise, leveraging Node.js and
               NestJS to ensure robust, scalable infrastructures that support modern mobile applications. I'm known for
-              mentoring developers, implementing clean architectures like MVVM, and driving innovation in fast-paced,
+              implementing clean architectures like MVVM and driving innovation in fast-paced,
               agile environments.
             </p>
             <p>
