@@ -92,17 +92,6 @@ export default function Experience() {
       ],
       skills: ["Android", "iOS", "Location-based Services", "SaaS", "Team Leadership"],
     },
-    {
-      title: "Backend & Android Developer",
-      company: "Rahyab Telecom",
-      location: "Tehran, Iran",
-      period: "Jan 2013 – Jan 2016",
-      description: [
-        "Developed Android solutions, improving system reliability by 30% and reducing operational costs by 15%, ensuring high reliability and performance.",
-        "Played a key role in launching the OSS (Operational Support System), streamlining telecommunication operations and improving system management.",
-      ],
-      skills: ["Android", "Backend Development", "OSS", "Telecommunications"],
-    },
   ]
 
   // Display only the first 4 experiences initially
