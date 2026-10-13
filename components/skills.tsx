@@ -11,24 +11,67 @@ export default function Skills() {
 
   const skillCategories = [
     {
-      category: "Mobile Development",
-      skills: ["Android", "iOS", "Kotlin", "Swift", "Flutter", "Jetpack Compose", "SwiftUI", "ARKit"],
+      category: "Mobile",
+      skills: [
+        "iOS",
+        "Swift",
+        "SwiftUI",
+        "UIKit",
+        "ARKit",
+        "Android",
+        "Kotlin",
+        "Jetpack Compose",
+        "Android Jetpack",
+        "Navigation Component",
+        "Flutter",
+        "Dart",
+        "RxDart",
+      ],
     },
     {
-      category: "Backend Development",
-      skills: ["Node.js", "NestJS", "Microservices", "RESTful APIs", "GraphQL"],
+      category: "Web Frontend",
+      skills: ["Angular", "TypeScript", "RxJS", "HTML5/CSS3", "Progressive Web Apps (PWA)", "Responsive UI"],
+    },
+    {
+      category: "Backend & Cloud",
+      skills: [
+        "Node.js",
+        "NestJS",
+        "REST APIs",
+        "WebSockets",
+        "Firebase",
+        "Google Cloud Platform",
+        "Firestore",
+        "Cloud Functions",
+        "Cloud Storage",
+        "Redis",
+        "SQL & NoSQL",
+      ],
     },
     {
       category: "Architecture",
-      skills: ["MVVM", "MVI", "Clean Architecture", "Design Patterns"],
+      skills: [
+        "Clean Architecture",
+        "MVVM / MVVM-C",
+        "MVI",
+        "VIPER",
+        "Coordinator Pattern",
+        "Modular Design",
+        "Microservices",
+      ],
     },
     {
-      category: "DevOps & Tools",
-      skills: ["Docker","CI/CD", "Jenkins", "GitLab CI", "Git", "Jira", "Firebase"],
-    },
-    {
-      category: "Databases",
-      skills: ["SQL", "NoSQL","Redis", "Firestore", "Room", "CoreData"],
+      category: "Engineering Practices",
+      skills: [
+        "CI/CD",
+        "Jenkins",
+        "GitLab CI",
+        "Automated Testing",
+        "Git",
+        "Code Review",
+        "Performance Optimization",
+        "Agile/Scrum",
+      ],
     },
   ]
 

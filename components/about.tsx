@@ -22,25 +22,22 @@ export default function About() {
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About Me</h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Skilled Mobile Developer with extensive experience in building high-performance Android and iOS
-              applications.
+              Mobile and web frontend lead with 10+ years building Android, iOS, and web applications.
             </p>
           </div>
           <div className="mx-auto max-w-3xl space-y-4 text-left">
             <p>
-              I specialize in building high-performance Android and iOS applications using Kotlin, Swift, and Flutter.
-              With a focus on optimizing app performance and reducing development cycles, I deliver
-              seamless user experiences across platforms.
+              I'm a mobile and web frontend lead with 10+ years building Android, iOS, and web applications and 5+
+              years leading cross-functional teams for companies in Australia, Italy, and Iran.
             </p>
             <p>
-              While my primary focus is mobile development, I also bring backend expertise, leveraging Node.js and
-              NestJS to ensure robust, scalable infrastructures that support modern mobile applications. I'm known for
-              implementing clean architectures like MVVM and driving innovation in fast-paced,
-              agile environments.
+              I have deep native experience in Swift/SwiftUI and Kotlin/Jetpack Compose, plus production web work in
+              Angular and TypeScript (web apps and PWAs). I'm comfortable owning the full stack when needed, with
+              Node.js/NestJS backends on Google Cloud and Firebase behind products serving 2,000,000+ users.
             </p>
             <p>
-              I'm passionate about creating intuitive, efficient applications that solve real-world problems and provide
-              exceptional user experiences.
+              I'm known for clean, testable architecture (Clean Architecture, MVVM, MVI), CI/CD automation, and
+              mentoring developers in fast-paced agile environments.
             </p>
           </div>
         </motion.div>

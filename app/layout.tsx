@@ -6,9 +6,9 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Mohsen Mokhtari - Mobile Developer",
+  title: "Mohsen Mokhtari - Mobile & Web Frontend Team Lead",
   description:
-    "Portfolio of Mohsen Mokhtari, a skilled Mobile Developer with expertise in Android, iOS, and Flutter development.",
+    "Portfolio of Mohsen Mokhtari, a mobile and web frontend team lead with 10+ years building iOS, Android, and web applications.",
     generator: 'Mohsen Mokhtari'
 }
 

@@ -17,80 +17,90 @@ export default function Experience() {
 
   const experiences = [
     {
-      title: "iOS Developer",
+      title: "Senior Mobile Engineer",
+      company: "RTA (Round Table Apps)",
+      url: "https://roundtableapps.com/",
+      location: "Australia (Remote)",
+      period: "Apr 2025 – Present",
+      description: [
+        "Build and maintain iOS applications in Swift and SwiftUI for large-scale client products, including Blossom Bank (Australia), American Express, chat applications, and mobile games.",
+        "Implement real-time communication features and secure payment integrations in close collaboration with cross-functional teams.",
+        "Introduced the Coordinator pattern to restructure app navigation, improving modularity, scalability, and testability.",
+        "Own the CI/CD pipelines for automated testing, static code analysis, and deployment, cutting release turnaround and manual errors.",
+        "Optimize UI performance and responsiveness through Swift concurrency, efficient animations, and careful memory management.",
+      ],
+      skills: ["Swift", "SwiftUI", "Coordinator Pattern", "Swift Concurrency", "CI/CD"],
+    },
+    {
+      title: "Technical Team Lead / Mobile & Web Developer",
       company: "Forequest",
+      url: "https://forequest.it/",
       location: "Italy (Remote)",
-      period: "Apr 2024 – Present",
+      period: "Apr 2023 – Apr 2025",
       description: [
-        "Developed Ludovico iOS app using SwiftUI, improving user retention by 15% through advanced animations and seamless user experience.",
-        "Utilized Google Cloud Platform (GCP) services like Firestore, Cloud Functions, Storage, and Analytics to build a scalable, cloud-native infrastructure.",
-        "Managed technical direction and team coordination, driving efficient project execution and delivery across mobile and backend teams.",
+        "Set the technical direction for a cross-functional team across mobile, web, and backend, from architecture decisions through release, and coordinated delivery between the teams.",
+        "Led development of the Ludovico iOS app in SwiftUI; advanced animations and a smoother user experience improved user retention by 15%.",
+        "Built the product's web frontend in Angular and TypeScript, sharing the same NestJS/Firebase backend and data models as the mobile apps.",
+        "Designed and built the backend with NestJS and Firebase (Firestore, Cloud Functions, Storage, Analytics) on Google Cloud Platform for real-time, cloud-native data flow.",
+        "Developed iOS (SwiftUI, ARKit) and Android (Jetpack Compose) AR apps, tuning rendering and UI responsiveness for smooth AR sessions.",
+        "Implemented CI/CD pipelines for mobile and web, enabling continuous delivery across the stack.",
       ],
-      skills: ["SwiftUI", "GCP", "Firestore", "Cloud Functions", "Firebase", "AR"],
+      skills: ["SwiftUI", "ARKit", "Jetpack Compose", "Angular", "TypeScript", "NestJS", "Firebase", "GCP", "CI/CD"],
     },
     {
-      title: "iOS & Android Developer",
-      company: "Actifyre",
-      location: "Italy (Freelance)",
-      period: "Sep 2023 – Nov 2023",
-      description: [
-        "Developed iOS AR app using SwiftUI, optimizing UI performance by 25% and improving AR experience responsiveness by 30%.",
-        "Implemented CI/CD pipelines to streamline development and ensure smooth, continuous delivery.",
-        "Developed Android AR app using Jetpack Compose, optimizing UI performance.",
-      ],
-      skills: ["SwiftUI", "AR", "Jetpack Compose", "CI/CD"],
-    },
-    {
-      title: "Android & iOS Developer",
+      title: "Mobile Team Lead",
       company: "Boom",
+      url: "https://www.boomlyapp.com/",
       location: "Australia (Remote)",
       period: "Sep 2021 – Sep 2023",
       description: [
-        "Built iOS apps using SwiftUI and Android with Jetpack Compose, reducing development time by 40% and improving UI performance.",
-        "Developed iOS and Android workout platform, increasing user engagement by 20% and reducing app loading time by 35%.",
-        "Implemented MVVM and MVI architectures, ensuring maintainable and scalable codebases.",
-        "Developed image and video editing tools, along with image processing functionalities for a rich media experience.",
-        "Established CI/CD pipelines to automate testing and streamline deployments across both platforms.",
+        "Led iOS and Android development of a workout platform; performance work cut app load time by 35% and helped lift user engagement by 20%.",
+        "Built the iOS app in SwiftUI and the Android app in Jetpack Compose on MVVM-C and MVI architectures, keeping both codebases maintainable and testable.",
+        "Developed in-app image and video editing tools and image-processing features for a rich media experience.",
+        "Established CI/CD pipelines to automate testing and streamline releases on both platforms.",
       ],
-      skills: ["SwiftUI", "Jetpack Compose", "MVVM", "MVI", "CI/CD"],
+      skills: ["SwiftUI", "Jetpack Compose", "MVVM-C", "MVI", "CI/CD"],
     },
     {
-      title: "Android Developer",
+      title: "Frontend Team Lead (Part-Time)",
       company: "Toolbox",
-      location: "Tehran, Iran (Part-Time)",
+      url: "https://play.google.com/store/apps/details?id=ir.shahbaz.SHZToolBox_demo",
+      location: "Tehran, Iran",
       period: "Jul 2022 – Sep 2023",
       description: [
-        "Migrated the app from version 5 to 6, incorporating Jetpack and Android Navigation Component to enhance app functionality and performance.",
-        "Launched web and PWA apps, increasing user accessibility by 50% and growing platform reach by 15%.",
-        "Introduced microservices for the backend, improving scalability and deployment efficiency.",
-        "Established a stable DevOps environment, streamlining development and deployment processes.",
-        "Spearheaded the development of new features, ensuring a seamless transition during the migration.",
+        "Led the migration of the Android app (5M+ downloads on Google Play) from v5 to v6, adopting Android Jetpack and the Navigation Component to modernize the architecture and improve performance.",
+        "Launched the web app and PWA versions of the product in Angular and TypeScript, extending the platform from Android-only to browser users.",
+        "Set up a stable DevOps and CI environment that streamlined development and deployment.",
+        "Drove new-feature development while keeping the migration seamless for existing users.",
       ],
-      skills: ["Jetpack", "Navigation Component", "PWA", "Microservices", "DevOps"],
+      skills: ["Android Jetpack", "Navigation Component", "Angular", "TypeScript", "PWA", "DevOps"],
     },
     {
-      title: "Android & iOS Developer",
+      title: "Mobile Team Lead",
       company: "Happy",
+      url: "https://play.google.com/store/apps/details?id=io.joinhappy.android",
       location: "Australia (Remote)",
       period: "Jul 2020 – Jan 2022",
       description: [
-        "Modernized nannies app for Android and iOS, improving performance by 30% and enhancing user experience.",
-        "Refactored codebase, leading to a 20% reduction in maintenance overhead.",
-        "Implemented best practices in mobile development, ensuring a scalable and robust solution for the app's long-term growth.",
+        "Modernized the Android and iOS apps of a nanny-booking platform, noticeably improving performance and user experience.",
+        "Refactored the legacy codebase, reducing maintenance overhead and setting up a scalable foundation for the app's long-term growth.",
       ],
       skills: ["Android", "iOS", "Performance Optimization", "Code Refactoring"],
     },
     {
-      title: "Android, iOS Developer",
+      title: "Technical Team Lead & Mobile Developer",
       company: "Parsa",
+      url: "http://parsadp.com/",
       location: "Tehran, Iran",
-      period: "Jan 2016 – Jul 2020",
+      period: "Jan 2015 – Jul 2020",
       description: [
-        "Developed products such as online taxi and courier systems, enabling a 25% faster time-to-market and improving scalability to handle 2,000,000+ users.",
-        "Built a location-based SaaS framework, enabling service providers (e.g., taxi, courier, and shopping services) to launch fully functional apps in less than a week.",
-        "Managed cross-functional teams, driving the design, development, and deployment of location-based platforms across Android and iOS.",
+        "Led development of a location-based SaaS framework that let service providers (taxi, courier, shopping) launch fully functional Android and iOS apps in under a week.",
+        "Delivered online taxi and courier products on top of the framework, scaling the platform to 2,000,000+ users.",
+        "Built and optimized the backend infrastructure supporting these apps for reliability and performance at scale.",
+        "Led and mentored cross-functional teams through design, development, and deployment across Android and iOS.",
+        "Developed the core Android solutions, improving system reliability and reducing operational costs.",
       ],
-      skills: ["Android", "iOS", "Location-based Services", "SaaS"],
+      skills: ["Android", "iOS", "Location-based Services", "SaaS", "Backend", "Team Leadership"],
     },
   ]
 
@@ -118,7 +128,7 @@ export default function Experience() {
           <div className="flex flex-col items-center space-y-4 text-center mb-10">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Work Experience</h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              My professional journey in mobile development.
+              My professional journey in mobile and web development.
             </p>
           </div>
           <motion.div
@@ -132,14 +142,19 @@ export default function Experience() {
                 <motion.div key={index} variants={itemVariants}>
                   <Card>
                     <CardHeader>
-                      <div className="flex justify-between items-start">
+                      <div className="flex justify-between items-start gap-4">
                         <div>
                           <CardTitle>{exp.title}</CardTitle>
                           <CardDescription>
-                            {exp.company} | {exp.location}
+                            <a href={exp.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                              {exp.company}
+                            </a>{" "}
+                            | {exp.location}
                           </CardDescription>
                         </div>
-                        <Badge variant="outline">{exp.period}</Badge>
+                        <Badge variant="outline" className="shrink-0 whitespace-nowrap">
+                          {exp.period}
+                        </Badge>
                       </div>
                     </CardHeader>
                     <CardContent>

@@ -29,8 +29,8 @@ export default function Hero() {
       <div className="container px-4 md:px-6 z-10">
         <div className="flex flex-col items-center text-center space-y-4">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="text-3xl md:text-5xl font-bold tracking-tighter">Mohsen Mokhtar</h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mt-2">Mobile Developer</p>
+            <h1 className="text-3xl md:text-5xl font-bold tracking-tighter">Mohsen Mokhtari</h1>
+            <p className="text-xl md:text-2xl text-muted-foreground mt-2">Mobile & Web Frontend Team Lead</p>
           </motion.div>
           <motion.p
             className="max-w-[700px] text-muted-foreground md:text-xl"
@@ -38,8 +38,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Building high-performance mobile applications for Android and iOS with expertise in Kotlin, Swift, and
-            Flutter.
+            Building iOS, Android, and web applications with Swift, Kotlin, and Angular, backed by Node.js and NestJS.
           </motion.p>
           <motion.div
             className="flex flex-wrap justify-center gap-4 mt-6"

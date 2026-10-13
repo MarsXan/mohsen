@@ -9,7 +9,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Github, Linkedin, Mail, Phone } from "lucide-react"
+import { Github, Layers, Linkedin, Mail, MapPin, Phone } from "lucide-react"
 
 export default function Contact() {
   const [ref, inView] = useInView({
@@ -58,6 +58,10 @@ export default function Contact() {
                 </a>
               </div>
               <div className="flex items-center gap-3">
+                <MapPin className="h-5 w-5 text-muted-foreground" />
+                <span>Tehran, Iran (open to remote)</span>
+              </div>
+              <div className="flex items-center gap-3">
                 <Linkedin className="h-5 w-5 text-muted-foreground" />
                 <a href="https://www.linkedin.com/in/mohsen-mokhtari/" target="_blank" rel="noopener noreferrer" className="hover:underline">
                   LinkedIn Profile
@@ -67,6 +71,12 @@ export default function Contact() {
                 <Github className="h-5 w-5 text-muted-foreground" />
                 <a href="https://github.com/MarsXan/" target="_blank" rel="noopener noreferrer" className="hover:underline">
                   GitHub Profile
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Layers className="h-5 w-5 text-muted-foreground" />
+                <a href="https://stackoverflow.com/users/5892896/mohsen-mokhtari" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                  Stack Overflow Profile
                 </a>
               </div>
             </CardContent>

@@ -15,50 +15,50 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "Fog Computing Simulator",
+      title: "Yass",
       description:
-        "Developed a toolkit for fog/edge computing using Java, Kotlin, and Machine Learning, improving simulation accuracy by 30% and reducing processing time by 25%.",
-      technologies: ["Java", "Kotlin", "Machine Learning"],
+        "Donation apps for Android, iOS, and web built with Flutter/Dart, Kotlin, and Swift, using RxDart, Firebase, and a role-based clean architecture.",
+      technologies: ["Flutter", "Dart", "Kotlin", "Swift", "RxDart", "Firebase"],
       github: "#",
       demo: "#",
     },
     {
       title: "Crypto Arbitrage Detector",
       description:
-        "Created a tool using Nest.js, Angular, and Redis for identifying crypto arbitrage opportunities, achieving a detection accuracy of 90% and generating alerts in real-time.",
-      technologies: ["Nest.js", "Angular", "Redis"],
+        "Real-time arbitrage detection tool with a NestJS backend, Angular frontend, and Redis, generating live alerts on opportunities.",
+      technologies: ["NestJS", "Angular", "Redis"],
       github: "#",
       demo: "#",
     },
     {
-      title: "Android Malware Detector",
+      title: "AirBox (Online Air Mail)",
       description:
-        "Collaborated on a malware detection project using Machine Learning, increasing detection rates by 40% compared to traditional methods.",
-      technologies: ["Android", "Machine Learning"],
-      github: "#",
-      demo: "#",
-    },
-    {
-      title: "Yass",
-      description:
-        "Developed donation apps for Android, iOS, and web platforms using Flutter, Kotlin, Swift, and Dart, integrating RxDart, Firebase, and a role-based clean architecture.",
-      technologies: ["Flutter", "Kotlin", "Swift", "Dart", "Firebase"],
+        "Cross-platform Android/iOS app for sending and receiving packages by drone, with real-time tracking, notifications, and delivery management.",
+      technologies: ["Android", "iOS", "Real-time Tracking"],
       github: "#",
       demo: "#",
     },
     {
       title: "Time-Tracking App",
       description:
-        "Developing a time-tracking and productivity monitoring app similar to Time Doctor using NestJS, with WebSocket integration for real-time tracking and handling user sessions.",
+        "Time Doctor–style productivity monitor built on NestJS with WebSocket-based real-time session tracking.",
       technologies: ["NestJS", "WebSocket", "React"],
       github: "#",
       demo: "#",
     },
     {
-      title: "AirBox: Online Air Mail",
+      title: "Fog Computing Simulator",
       description:
-        "Developed a cross-platform app for Android and iOS that allows users to send and receive packages using drones. Focused on a seamless user experience with real-time tracking, notifications, and efficient delivery management.",
-      technologies: ["Android", "iOS", "Real-time Tracking"],
+        "Java/Kotlin toolkit for simulating fog/edge computing scenarios with machine-learning-based optimization.",
+      technologies: ["Java", "Kotlin", "Machine Learning"],
+      github: "#",
+      demo: "#",
+    },
+    {
+      title: "Android Malware Detector",
+      description:
+        "Collaborative machine-learning project for detecting Android malware, outperforming traditional detection methods.",
+      technologies: ["Android", "Machine Learning"],
       github: "#",
       demo: "#",
     },
