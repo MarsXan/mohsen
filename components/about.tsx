@@ -1,48 +1,43 @@
-"use client"
-
-import { motion } from "framer-motion"
-import { useInView } from "react-intersection-observer"
+import { about } from "@/lib/resume"
 
 export default function About() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  })
-
   return (
-    <section id="about" className="py-20 bg-background">
-      <div className="container px-4 md:px-6">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-col items-center space-y-4 text-center"
-        >
-          <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About Me</h2>
-            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Mobile and web frontend lead with 10+ years building Android, iOS, and web applications.
-            </p>
+    <section id="about" data-scene="about" className="relative">
+      <div className="layer mx-auto grid max-w-7xl gap-8 px-6 py-20 md:px-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-12 lg:py-32">
+        <div>
+          <div data-anchor className="h-[50svh] lg:sticky lg:top-[11vh] lg:h-[78vh]" />
+        </div>
+        <div className="self-center">
+          <p className="eyebrow text-ios">About</p>
+          <h2 className="mt-4 max-w-2xl font-display text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl">
+            {about.heading}
+          </h2>
+          <div className="mt-7 max-w-2xl space-y-4 text-base leading-relaxed text-ink/75 md:text-lg">
+            {about.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
           </div>
-          <div className="mx-auto max-w-3xl space-y-4 text-left">
-            <p>
-              I'm a mobile and web frontend lead with 10+ years building Android, iOS, and web applications and 5+
-              years leading cross-functional teams for companies in Australia, Italy, and Iran.
-            </p>
-            <p>
-              I have deep native experience in Swift/SwiftUI and Kotlin/Jetpack Compose, plus production web work in
-              Angular and TypeScript (web apps and PWAs). I'm comfortable owning the full stack when needed, with
-              Node.js/NestJS backends on Google Cloud and Firebase behind products serving 2,000,000+ users.
-            </p>
-            <p>
-              I'm known for clean, testable architecture (Clean Architecture, MVVM, MVI), CI/CD automation, and
-              mentoring developers in fast-paced agile environments.
-            </p>
-          </div>
-        </motion.div>
+          <dl className="mt-10 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4">
+            {about.stats.map((stat) => (
+              <div key={stat.label} className="rounded-3xl border border-ink/5 bg-white p-5 shadow-sm shadow-ink/5">
+                <dt className="sr-only">{stat.label}</dt>
+                <dd>
+                  <span className="gradient-text font-display text-4xl font-extrabold tracking-tight">{stat.value}</span>
+                  <span className="mt-1 block text-sm leading-snug text-ink/65">{stat.label}</span>
+                </dd>
+              </div>
+            ))}
+          </dl>
+          <dl className="mt-8 max-w-2xl divide-y divide-ink/10 border-y border-ink/10 text-sm md:text-base">
+            {about.facts.map((fact) => (
+              <div key={fact.label} className="grid gap-1 py-3.5 sm:grid-cols-[9rem_1fr]">
+                <dt className="eyebrow pt-1 text-ink/55">{fact.label}</dt>
+                <dd className="text-ink/85">{fact.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
       </div>
     </section>
   )
 }
-

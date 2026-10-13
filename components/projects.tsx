@@ -1,146 +1,69 @@
-"use client"
+import { ArrowUpRight, CandlestickChart, CloudFog, HeartHandshake, Package, ShieldCheck, Spade, Timer } from "lucide-react"
+import { projects } from "@/lib/resume"
 
-import { motion } from "framer-motion"
-import { useInView } from "react-intersection-observer"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { ExternalLink, Github } from "lucide-react"
+const icons = {
+  spade: Spade,
+  heart: HeartHandshake,
+  chart: CandlestickChart,
+  package: Package,
+  timer: Timer,
+  cloud: CloudFog,
+  shield: ShieldCheck,
+}
 
 export default function Projects() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  })
-
-  const projects = [
-    {
-      title: "Yass",
-      description:
-        "Donation apps for Android, iOS, and web built with Flutter/Dart, Kotlin, and Swift, using RxDart, Firebase, and a role-based clean architecture.",
-      technologies: ["Flutter", "Dart", "Kotlin", "Swift", "RxDart", "Firebase"],
-      github: "#",
-      demo: "#",
-    },
-    {
-      title: "Crypto Arbitrage Detector",
-      description:
-        "Real-time arbitrage detection tool with a NestJS backend, Angular frontend, and Redis, generating live alerts on opportunities.",
-      technologies: ["NestJS", "Angular", "Redis"],
-      github: "#",
-      demo: "#",
-    },
-    {
-      title: "AirBox (Online Air Mail)",
-      description:
-        "Cross-platform Android/iOS app for sending and receiving packages by drone, with real-time tracking, notifications, and delivery management.",
-      technologies: ["Android", "iOS", "Real-time Tracking"],
-      github: "#",
-      demo: "#",
-    },
-    {
-      title: "Time-Tracking App",
-      description:
-        "Time Doctor–style productivity monitor built on NestJS with WebSocket-based real-time session tracking.",
-      technologies: ["NestJS", "WebSocket", "React"],
-      github: "#",
-      demo: "#",
-    },
-    {
-      title: "Fog Computing Simulator",
-      description:
-        "Java/Kotlin toolkit for simulating fog/edge computing scenarios with machine-learning-based optimization.",
-      technologies: ["Java", "Kotlin", "Machine Learning"],
-      github: "#",
-      demo: "#",
-    },
-    {
-      title: "Android Malware Detector",
-      description:
-        "Collaborative machine-learning project for detecting Android malware, outperforming traditional detection methods.",
-      technologies: ["Android", "Machine Learning"],
-      github: "#",
-      demo: "#",
-    },
-  ]
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  }
-
   return (
-    <section id="projects" className="py-20 bg-muted/50">
-      <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center space-y-4 text-center mb-10">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Personal Projects</h2>
-          <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Showcasing my passion for innovation and problem-solving.
-          </p>
+    <section id="projects" data-scene="projects" className="panel-tint relative rounded-[36px] md:mx-3 md:rounded-[56px]">
+      <div className="layer mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-28">
+        <div className="grid items-center gap-4 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-10">
+          <header>
+            <p className="eyebrow text-ios">Personal projects</p>
+            <h2 className="mt-4 font-display text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl">Built on my own time.</h2>
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-ink/70 md:text-lg">
+              Side projects across mobile, backend, and research, including an app for sending parcels by drone.
+            </p>
+          </header>
+          <div data-anchor className="h-56 lg:h-80" />
         </div>
-        <motion.div
-          ref={ref}
-          variants={containerVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          {projects.map((project, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <Card className="h-full flex flex-col">
-                <CardHeader>
-                  <CardTitle>{project.title}</CardTitle>
-                  <CardDescription className="line-clamp-2">{project.description}</CardDescription>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, i) => (
-                      <Badge key={i} variant="secondary">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-                <CardFooter className="flex justify-between">
-                  <Button asChild variant="outline" size="sm">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2"
-                    >
-                      <Github className="h-4 w-4" />
-                      Code
-                    </a>
-                  </Button>
-                  <Button asChild variant="outline" size="sm">
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2"
-                    >
-                      <ExternalLink className="h-4 w-4" />
-                      Demo
-                    </a>
-                  </Button>
-                </CardFooter>
-              </Card>
-            </motion.div>
-          ))}
-        </motion.div>
+        <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project, i) => {
+            const Icon = icons[project.icon]
+            return (
+              <li
+                key={project.title}
+                className="flex flex-col rounded-[28px] border border-white/70 bg-white/80 p-6 shadow-sm shadow-ink/5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-ios/10 md:p-7"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-ios to-droid text-white shadow-lg shadow-ios/25">
+                    <Icon className="h-6 w-6" />
+                  </span>
+                  <span className="font-mono text-xs text-ink/40">{String(i + 1).padStart(2, "0")}</span>
+                </div>
+                <h3 className="mt-5 font-display text-xl font-bold tracking-tight">{project.title}</h3>
+                <p className="mt-2 flex-1 text-[0.95rem] leading-relaxed text-ink/70">{project.description}</p>
+                <ul className="mt-5 flex flex-wrap gap-2">
+                  {project.technologies.map((tech) => (
+                    <li key={tech} className="chip bg-ink/5 text-ink/80">
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
+                {project.link && (
+                  <a
+                    href={project.link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-5 inline-flex items-center gap-1 self-start text-sm font-semibold text-ink underline decoration-ios/40 decoration-2 underline-offset-4 transition hover:decoration-ios"
+                  >
+                    {project.link.label}
+                    <ArrowUpRight className="h-4 w-4" />
+                  </a>
+                )}
+              </li>
+            )
+          })}
+        </ul>
       </div>
     </section>
   )
 }
-

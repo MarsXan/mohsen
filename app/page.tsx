@@ -1,22 +1,25 @@
-import Hero from "@/components/hero"
 import About from "@/components/about"
-import Experience from "@/components/experience"
-import Skills from "@/components/skills"
-import Projects from "@/components/projects"
 import Contact from "@/components/contact"
-import Footer from "@/components/footer"
+import Experience from "@/components/experience"
+import Hero from "@/components/hero"
+import Nav from "@/components/nav"
+import Projects from "@/components/projects"
+import Skills from "@/components/skills"
+import Stage from "@/components/stage"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
-      <Hero />
-      <About />
-      <Experience />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
-    </main>
+    <>
+      <Stage />
+      <Nav />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Contact />
+      </main>
+    </>
   )
 }
-

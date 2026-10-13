@@ -1,15 +1,21 @@
 import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import type { Metadata, Viewport } from "next"
+import { Inter, JetBrains_Mono, Sora } from "next/font/google"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+const sans = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" })
+const display = Sora({ subsets: ["latin"], variable: "--font-display", display: "swap" })
+const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", display: "swap" })
 
 export const metadata: Metadata = {
-  title: "Mohsen Mokhtari - Mobile & Web Frontend Team Lead",
+  title: "Mohsen Mokhtari - Mobile Developer",
   description:
-    "Portfolio of Mohsen Mokhtari, a mobile and web frontend team lead with 10+ years building iOS, Android, and web applications.",
-    generator: 'Mohsen Mokhtari'
+    "Portfolio of Mohsen Mokhtari, a mobile developer with 10+ years building iOS and Android applications, with hands-on AI and LLM experience.",
+  generator: "Mohsen Mokhtari",
+}
+
+export const viewport: Viewport = {
+  themeColor: "#f4f6fb",
 }
 
 export default function RootLayout({
@@ -18,12 +24,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={`${sans.variable} ${display.variable} ${mono.variable}`}>
+      <body>{children}</body>
     </html>
   )
 }
-
-
-
-import './globals.css'

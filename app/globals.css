@@ -4,16 +4,16 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 222 39% 97%;
+    --foreground: 226 49% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 226 49% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 226 49% 8%;
 
-    --primary: 221.2 83.2% 53.3%;
+    --primary: 218 100% 59%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -30,48 +30,172 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
+    --ring: 218 100% 59%;
 
     --radius: 0.5rem;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
-  }
-}
-
-@layer base {
   * {
     @apply border-border;
   }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-paper font-sans text-ink antialiased;
+  }
+
+  section[id] {
+    scroll-margin-top: 4.5rem;
+  }
+
+  ::selection {
+    background: rgba(47, 123, 255, 0.25);
   }
 }
 
+@layer components {
+  /* The 3D canvas. On phones and tablets it sits above the page content, on larger screens between each
+     section's background and its text. */
+  .stage {
+    @apply pointer-events-none fixed left-0 top-0 z-30 w-full lg:z-10;
+    height: 100lvh;
+  }
+
+  .stage canvas {
+    @apply block h-full w-full opacity-0;
+    transition: opacity 0.8s ease;
+  }
+
+  .stage canvas[data-ready="true"] {
+    @apply opacity-100;
+  }
+
+  .stage svg {
+    @apply absolute inset-0 h-full w-full opacity-0;
+    transition: opacity 0.2s ease;
+  }
+
+  /* Section text sits above the canvas. */
+  .layer {
+    @apply relative z-20;
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs font-medium uppercase tracking-[0.18em];
+  }
+
+  .gradient-text {
+    background: linear-gradient(92deg, #2f7bff 0%, #12b5a6 55%, #2fd58a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .hero {
+    background:
+      radial-gradient(52% 46% at 82% 38%, rgba(47, 123, 255, 0.2), transparent 70%),
+      radial-gradient(40% 40% at 6% 96%, rgba(47, 213, 138, 0.2), transparent 70%),
+      radial-gradient(rgba(11, 16, 32, 0.09) 1px, transparent 1.5px) 0 0 / 28px 28px,
+      #f4f6fb;
+  }
+
+  .panel-dark {
+    @apply text-[#e8ecff];
+    background:
+      radial-gradient(60% 45% at 78% 30%, rgba(47, 123, 255, 0.22), transparent 70%),
+      linear-gradient(rgba(127, 178, 255, 0.07) 1px, transparent 1px) 0 0 / 56px 56px,
+      linear-gradient(90deg, rgba(127, 178, 255, 0.07) 1px, transparent 1px) 0 0 / 56px 56px,
+      #070b1a;
+  }
+
+  .panel-tint {
+    background:
+      radial-gradient(50% 60% at 85% 0%, rgba(47, 213, 138, 0.22), transparent 70%),
+      radial-gradient(50% 60% at 0% 100%, rgba(47, 123, 255, 0.18), transparent 70%), #eaf0fb;
+  }
+
+  /* Phone layout: a strip that stays at the top of the screen and holds the 3D phone while the
+     cards scroll underneath it. */
+  .strip {
+    @apply sticky top-0 z-[25] -mx-6 h-[36svh] px-6 pb-2 pt-16 lg:hidden;
+  }
+
+  .strip::after {
+    content: "";
+    @apply pointer-events-none absolute inset-x-0 top-full h-8;
+  }
+
+  .strip-dark {
+    background: #070b1a;
+  }
+
+  .strip-dark::after {
+    background: linear-gradient(#070b1a, rgba(7, 11, 26, 0));
+  }
+
+  .strip-light {
+    background: #f4f6fb;
+  }
+
+  .strip-light::after {
+    background: linear-gradient(#f4f6fb, rgba(244, 246, 251, 0));
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-[0.8rem] font-medium leading-5;
+  }
+}
+
+/* Set by the 3D scene while the mouse is over, or dragging, the phone. */
+html.can-grab body {
+  cursor: grab;
+}
+
+html.can-tap body {
+  cursor: pointer;
+}
+
+html.is-grabbing body,
+html.is-grabbing body * {
+  cursor: grabbing !important;
+  user-select: none;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes nudge {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .rise {
+    animation: none;
+  }
+}
